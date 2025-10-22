@@ -7,6 +7,13 @@ class Voiture
     private $modele;
     private $vitesse;
 
+    public function __construct($marque="",$modele="",$vitesse=0)
+    {
+        $this->marque=$marque;
+        $this->modele=$modele;
+        $this->vitesse=$vitesse;
+    }
+
     /**
      * @return mixed
      */
@@ -58,5 +65,10 @@ class Voiture
 
     public function avancer(){
         echo "Je suis ".$this->getMarque()." ".$this->getModele()." "." et J'avance à ".$this->getVitesse(). "km";
+    }
+
+    public function afficher()
+    {
+        return $this->marque." ".$this->modele." ".$this->vitesse;
     }
 }
